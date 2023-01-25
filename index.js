@@ -41,6 +41,21 @@ document.querySelectorAll(".color-choose .input").forEach((el) => {
     document.querySelectorAll(".btn").forEach((ele) => {
       ele.classList.add(color);
     });
+
+
+    const imgContainer = document.getElementById("img-container");
+    const loaderContainer = document.getElementById("loader-container");
+
+    imgContainer.classList.add("opacity-0");
+    loaderContainer.classList.remove("opacity-0")
+    
+    document.getElementById("loader-img").setAttribute("fill", color);
+    setTimeout(() => {
+      loaderContainer.classList.add("opacity-0");
+      imgContainer.classList.remove("opacity-0");
+    }, 2000);
+
+
   });
 });
 
