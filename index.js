@@ -47,15 +47,13 @@ document.querySelectorAll(".color-choose .input").forEach((el) => {
     const loaderContainer = document.getElementById("loader-container");
 
     imgContainer.classList.add("opacity-0");
-    loaderContainer.classList.remove("opacity-0")
-    
+    loaderContainer.classList.remove("opacity-0");
+
     document.getElementById("loader-img").setAttribute("fill", color);
     setTimeout(() => {
       loaderContainer.classList.add("opacity-0");
       imgContainer.classList.remove("opacity-0");
     }, 2000);
-
-
   });
 });
 
@@ -64,6 +62,8 @@ var uploadBtn = document.getElementById("upload-button");
 var imageInput = document.getElementById("image-input");
 var previewImage = document.getElementById("preview-image");
 var uploadBtnText = document.getElementById("fileUploadBtnText");
+var deselectIcon = document.getElementById("deselect-icon");
+var uploadIcon = document.getElementById("upload-icon");
 
 uploadBtn.addEventListener("click", function () {
   imageInput.click();
@@ -78,4 +78,7 @@ imageInput.addEventListener("change", function (e) {
   console.log("name *** ", e.target.files[0]);
   const fileName = e.target.files[0].name;
   uploadBtnText.innerText = fileName;
+  uploadIcon.classList.add('opacity-0');
+  deselectIcon.classList.remove('opacity-0');
+  deselectIcon.classList.add('deselect-icon');
 });
