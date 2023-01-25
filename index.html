@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <title>Custom Umbrella</title>
+</head>
+
+<body>
+    <div class="wrapper blue">
+        <main class="container">
+            <!-- Left Column | Image -->
+            <div class="left-column fade-in-image">
+                <div style="position: relative;">
+                    <img class="img active" data-image="blue" src="./public/Blue umbrella.png" alt="" />
+                    <img class="img" data-image="pink" src="./public/Pink umbrella.png" alt="" />
+                    <img class="img" data-image="yellow" src="./public/yellow umbrella.png" alt="" />
+                    <div class="preview-image-container preview">
+                        <img id="preview-image" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column | Details -->
+            <div style="width: 50%; height: 50%; padding: 20px;" class="right-column">
+                <div class="product-description">
+                    <p class="head-txt">Custom Umbrella</p>
+                    <div class="color-choose">
+                        <div class="radio-btn">
+                            <input data-image="blue" type="radio" id="blue" class="input" name="color" value="blue" />
+                            <label for="blue"><span></span></label>
+                        </div>
+                        <div class="radio-btn">
+                            <input data-image="yellow" type="radio" id="yellow" class="input" name="color"
+                                value="yellow" checked />
+                            <label for="yellow"><span></span></label>
+                        </div>
+                        <div class="radio-btn">
+                            <input data-image="pink" type="radio" id="pink" class="input" name="color" value="pink" />
+                            <label for="pink"><span></span></label>
+                        </div>
+                    </div>
+                    <p
+                        style="font-size: 25px ; text-align:left; color: #18191b; font-weight: 900; margin-bottom: 10px;">
+                        Customize your umbrella</p>
+                    <p
+                        style="font-size: 20px ; text-align:left; color: #18191b;margin-top: 0; margin-bottom: 5px; font-weight: lighter;">
+                        Upload a logo for Instant Preview.
+                    </p>
+                    <p style="font-size: 12px; text-align:left;margin-top: 0; margin-bottom: 10px; color: #18191b;">
+                        .png and .jpg files only. Max size is 5MB.
+                    </p>
+                    <div id="upload-button" class="btn blue" style="width:60%">
+                        <img src="/public/upload_icon.svg" alt="upload" />
+                        <p id="fileUploadBtnText">UPLOAD LOGO</p>
+                        <input type="file" style="opacity: 0; display: none;" accept="image/*" id="image-input" />
+                    </div>
+                </div>
+        </main>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
